@@ -9,7 +9,7 @@
 .prep-card:nth-child(1){background:#DFEAF0}.prep-card:nth-child(2){background:#F1E7D1}.prep-card:nth-child(3){background:#E5ECDF}.prep-card:nth-child(4){background:#EAE1EE}.daily-title{margin-top:30px}#checks{background:#F2E2DC}
 .pocket:nth-of-type(4n+1){background:#F0E0DA}.pocket:nth-of-type(4n+2){background:#E2EBDF}.pocket:nth-of-type(4n+3){background:#E1EAED}.pocket:nth-of-type(4n){background:#ECE5F0}
 #day-panel{background:#F3ECDD}.date-btn:nth-child(4n+2){background:#E4ECDF}.date-btn:nth-child(4n+3){background:#E2EBEE}.date-btn:nth-child(4n){background:#EEE4EC}.date-btn[aria-selected=true]{background:#DDCDA8}.action{background:#E7E2EE}
-</style></head><body><nav aria-label="主要選單"><a href="#home">扉頁</a><a href="#days">每日行程</a><a href="#flights">航班</a><a href="#stay">住宿</a><a href="#todo">待辦</a><a href="#pockets">口袋名單</a></nav><main>
+.journal{margin-top:24px;background:#E9E3EE}.journal fieldset{border:0;padding:0;margin:0;min-width:0}.journal-actions{display:flex;gap:12px;flex-wrap:wrap;margin:15px 0}.upload-label{display:inline-flex;align-items:center;cursor:pointer;position:relative;overflow:hidden}.upload-label input{position:absolute;inset:0;opacity:0;width:100%;height:100%;cursor:pointer}.upload-label:focus-within{outline:3px solid #805128;outline-offset:3px}.journal textarea{display:block;resize:vertical;width:100%;border:2px solid var(--ink);border-radius:14px;padding:12px;background:var(--paper);font:inherit;color:inherit;line-height:1.7;margin:8px 0 15px}.journal textarea:focus-visible{outline:3px solid #805128;outline-offset:3px}.journal-gallery{display:grid;gap:15px;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr))}.photo-card{margin:0;border:2px solid var(--ink);border-radius:18px;background:#FFFCF6;padding:13px;min-width:0}.photo-card img{width:100%;height:220px;object-fit:contain;background:#eee9e1;border-radius:10px}.photo-card label{display:block;font-size:14px;margin-top:8px}.journal .action{font-size:14px}#journal-status{overflow-wrap:anywhere}</style></head><body><nav aria-label="主要選單"><a href="#home">扉頁</a><a href="#days">每日行程</a><a href="#flights">航班</a><a href="#stay">住宿</a><a href="#todo">待辦</a><a href="#pockets">口袋名單</a></nav><main>
 <section id="home"><div class="hero"><div><div class="eyebrow">ANITA’S TOKYO NOTEBOOK · 2026</div><h1>東京生活日記<br>秋日慢旅手帳</h1><p>在東京好好工作，也好好生活。<br>一頓晚餐、一條小巷、一杯不趕時間的咖啡。</p><p class="pill">2026/10/26 — 11/12 · 18 天</p><p><span id="countdown" class="pill green" role="status"></span></p><a href="#days">翻開今天的行程 ↓</a></div>
 <svg class="hero-art" viewBox="0 0 520 570" role="img" aria-labelledby="art-title"><title id="art-title">莫蘭迪色手繪東京小圖鑑：東京鐵塔、雷門、咖啡、貓、電車、飯糰與海港。圖案為旅程意象，非新增行程。</title>
 <style>.doodle{fill:none;stroke:#57534e;stroke-width:2.7;stroke-linecap:round;stroke-linejoin:round}.caption{font-family:Huninn,sans-serif;font-size:13px;letter-spacing:1.5px;fill:#57534e;stroke:none}.tiny{font-size:10px;letter-spacing:1px}</style>
@@ -33,7 +33,25 @@
 <!-- harbor -->
 <g transform="translate(367 474) rotate(-2 60 30)"><path d="M4 37h111l-15 25-78-1Z" fill="#A8B8BF"/><path d="m25 36 3-20h61l6 20M44 16V7h20v9M59 7V-7M5 75q12-7 23 0t23 0t23 0t23 0t23 0"/><path d="M37 25h1m14 0h1m14 0h1m14 0h1" stroke-width="4"/><text class="caption" x="59" y="99" text-anchor="middle">YOKOHAMA</text></g></g></svg></div>
 <p class="note">日期說明：本網站展示你指定的 10/26～11/12。Notion 原始旅程為 10/23～11/14，回程航班為 11/14；11/12 並非已確認的返台日。倒數以 10/29 台灣時間 16:50 起飛計算，去程已依你補充更新為 10/29 台灣時間 16:50；10/26～10/28 改為行前期間，原東京活動待調整。</p><label class="motion"><input id="motion" type="checkbox">減少動態效果</label></section>
-<section id="days"><div class="eyebrow">ONE DAY, ONE LITTLE STORY</div><h2>每天，留一點空白</h2><p>除 10/29 起飛時間另標台灣時間，其餘東京行程使用日本時間。平日 10:00～19:00 工作；晚間以飯田橋單程步行約 30 分鐘內為原則。</p><div id="date-strip" class="date-strip" role="tablist" aria-label="選擇行程日期"></div><div class="day-controls"><button id="prev" class="action" aria-label="前一天">← 前一天</button><button id="today" class="action">查看今天</button><button id="next" class="action" aria-label="後一天">後一天 →</button></div><article id="day-panel" class="card" role="tabpanel" tabindex="0"></article><p class="muted">「必去」僅依來源中的固定日期活動標示：11/7 酉之市。其他行程皆可依體力與天氣調整；時間是規劃建議，並非已完成預約。</p><details><summary>雨天與自由日備案</summary><p>- 清澄白河半日： 10:00出門→庭園→午餐→咖啡；適合取代某個東京半日。不是大雨備案，庭園仍屬戶外。<br>- 小石川後樂園： 就近週末半日；一般09:00～17:00、最晚16:30入園，不能排19:00下班後。門票另計，出發前核對官方。<br>- 大雨： 改大型書店、室內商場或一座美術館；展覽、休館日與票價另查，不臨時硬塞多館。<br>- 工作累： 自由晚直接休息；這份表是選擇清單，不是打卡作業。<br>- 紅葉： 東京市區一般11月中旬以後才逐漸進入較佳時段，此行不保證滿紅；先享受秋天街景。</p></details></section>
+<section id="days"><div class="eyebrow">ONE DAY, ONE LITTLE STORY</div><h2>每天，留一點空白</h2><p>除 10/29 起飛時間另標台灣時間，其餘東京行程使用日本時間。平日 10:00～19:00 工作；晚間以飯田橋單程步行約 30 分鐘內為原則。</p><div id="date-strip" class="date-strip" role="tablist" aria-label="選擇行程日期"></div><div class="day-controls"><button id="prev" class="action" aria-label="前一天">← 前一天</button><button id="today" class="action">查看今天</button><button id="next" class="action" aria-label="後一天">後一天 →</button></div><article id="day-panel" class="card" role="tabpanel" tabindex="0"></article><div class="card journal" id="journal">
+<h3 id="journal-date">今天的照片與文字</h3>
+<p class="muted">拍下旅途中想留下的片刻，也可以從相簿選照片。每張照片都能加註文字。</p>
+<fieldset id="journal-fields" disabled>
+<div class="journal-actions">
+<label class="action upload-label">拍照<input id="journal-camera" type="file" accept="image/jpeg,image/png,image/webp,image/gif" capture="environment"></label>
+<label class="action upload-label">從相簿匯入<input id="journal-upload" type="file" accept="image/jpeg,image/png,image/webp,image/gif" multiple></label>
+</div>
+<p class="muted">支援 JPG、PNG、WebP、GIF，每張上限 10 MB，每日最多 20 張。HEIC 請先轉為 JPG。拍照是否直接開啟相機，依手機與瀏覽器支援而定。</p>
+<label for="journal-note">今天走到哪裡？有什麼想記下來？</label>
+<textarea id="journal-note" rows="4" maxlength="10000" placeholder="留下一段今天的旅行筆記……"></textarea>
+<div id="journal-gallery" class="journal-gallery"></div><p id="journal-empty" class="muted">這一天還沒有照片。</p>
+<button id="journal-undo" type="button" class="action" hidden>復原上次移除的照片</button>
+<div class="journal-actions"><button id="journal-export" class="action" type="button">下載全部照片與文字備份</button><label class="action upload-label">匯入備份<input type="file" id="journal-import" accept="application/json,.json"></label></div>
+</fieldset>
+<p id="journal-status" class="muted" role="status" aria-live="polite">正在讀取旅途筆記……</p>
+<p class="muted">照片與文字保存在目前裝置與瀏覽器。清除瀏覽資料或更換網址／裝置可能看不到紀錄，請先下載備份，再到另一裝置匯入。備份是此網頁專用 JSON，不是 Notion 匯入檔。</p>
+</div>
+<p class="muted">「必去」僅依來源中的固定日期活動標示：11/7 酉之市。其他行程皆可依體力與天氣調整；時間是規劃建議，並非已完成預約。</p><details><summary>雨天與自由日備案</summary><p>- 清澄白河半日： 10:00出門→庭園→午餐→咖啡；適合取代某個東京半日。不是大雨備案，庭園仍屬戶外。<br>- 小石川後樂園： 就近週末半日；一般09:00～17:00、最晚16:30入園，不能排19:00下班後。門票另計，出發前核對官方。<br>- 大雨： 改大型書店、室內商場或一座美術館；展覽、休館日與票價另查，不臨時硬塞多館。<br>- 工作累： 自由晚直接休息；這份表是選擇清單，不是打卡作業。<br>- 紅葉： 東京市區一般11月中旬以後才逐漸進入較佳時段，此行不保證滿紅；先享受秋天街景。</p></details></section>
 <section id="flights"><h2>航班小卡</h2><div class="grid"><div class="card"><span class="pill blue">去程 · 10/29 出發</span><h3>松山 TSA → 羽田 HND</h3><p>2026/10/29　16:50 起飛（台灣時間）<br>日本時間 17:50 · ANA 全日空<br>班號：HN854（依你提供，待機票核對）<br>抵達時間與航廈：待補。</p><p class="muted">以你本次補充的 10/29 去程為準，取代 Notion 舊版 10/23 抵達安排。請核對機票上的班號拼寫與起飛時間。</p></div><div class="card"><span class="pill pink">回程 · 展示日期範圍外</span><h3>羽田 HND → 松山 TSA</h3><p>2026/11/14　09:20 起飛<br>ANA 全日空</p><p>班號、抵達時間、當日航廈：待機票確認。日期與起飛時間沿用 Notion，未另行核驗。</p><a href="https://www.ana.co.jp/ja/jp/international/theme/haneda-t2/" target="_blank" rel="noopener noreferrer">ANA 航廈確認 ↗</a></div></div><p class="muted">回程交通路線與原始提醒請見 <a href="https://app.notion.com/p/40134cf06e8a812294d5f54f8409ef42" target="_blank" rel="noopener noreferrer">Notion 交通錢包 ↗</a>；實際車次、機場流程與航班公告需於出發前確認。</p></section>
 <section id="stay"><h2>把飯田橋，當作生活基地</h2><div class="grid"><div class="card green"><span class="eyebrow">HOME BASE</span><h3>飯田橋周邊</h3><p>住宿名稱、地址、聯絡方式、訂房編號、入住／退房日期與時間：待補。</p><p>步行估時以飯田橋站相關出口起算，並非住宿門口。取得地址後，請再確認最近入口與電梯路線。</p><a href="https://www.google.com/maps/search/?api=1&query=Iidabashi+Tokyo" target="_blank" rel="noopener noreferrer">查看飯田橋地圖 ↗</a></div><div class="card"><span class="eyebrow">WORK & SLOW LIFE</span><h3>平日 10:00～19:00</h3><p>住宿作為主要辦公基地，重要會議先測試網路與連線。</p><p>換環境備選：TOKICAFE、ACCEA CAFE 飯田橋站前店；費用、通話與訂位規則見原始子頁。</p><a href="https://app.notion.com/p/40134cf06e8a81489082e362dbe89408" target="_blank" rel="noopener noreferrer">開啟數位辦公筆記 ↗</a></div></div></section>
 <section id="todo"><h2>出門前，慢慢確認</h2><p>先把行李、貓咪與工作安頓好，再開始旅行。以下清單可逐項勾選。</p><div class="grid" id="preflight"></div><h3 class="daily-title">每日出門與資料補齊</h3><div class="card checks" id="checks"></div><p id="save-note" class="muted">勾選紀錄只保存在這個瀏覽器，不會同步至 Notion 或其他裝置。</p></section>
@@ -46,7 +64,7 @@ let storageOK=true;const read=k=>{try{return localStorage.getItem(k)}catch(e){st
 const tokyoToday=()=>new Intl.DateTimeFormat('sv-SE',{timeZone:'Asia/Tokyo',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
 let selected=Math.max(0,DAYS.findIndex(d=>d.date===tokyoToday()));
 DAYS.forEach((d,i)=>{const b=document.createElement('button');b.className='date-btn';b.id='tab-'+i;b.setAttribute('role','tab');b.setAttribute('aria-controls','day-panel');b.innerHTML=escapeHTML(d.date.slice(5).replace('-','/'))+'<small>'+escapeHTML(d.week)+'</small>';b.onclick=()=>render(i);b.onkeydown=e=>{let n=i;if(e.key==='ArrowRight')n=Math.min(17,i+1);else if(e.key==='ArrowLeft')n=Math.max(0,i-1);else if(e.key==='Home')n=0;else if(e.key==='End')n=17;else return;e.preventDefault();render(n);$('tab-'+n).focus()};$('date-strip').append(b)});
-function render(i,scroll=true){selected=i;const d=DAYS[i];document.querySelectorAll('.date-btn').forEach((b,j)=>{b.setAttribute('aria-selected',String(i===j));b.tabIndex=i===j?0:-1});$('prev').disabled=i===0;$('next').disabled=i===17;const weekend=[0,6].includes(new Date(d.date+'T12:00:00+09:00').getUTCDay());let events=[];if(!weekend&&d.date>'2026-10-29')events.push(['10:00～19:00','工作時間','日本時間；住宿為主要辦公基地。']);
+function render(i,scroll=true){selected=i;if(window.journalLoaded)renderJournal(DAYS[i].date);const d=DAYS[i];document.querySelectorAll('.date-btn').forEach((b,j)=>{b.setAttribute('aria-selected',String(i===j));b.tabIndex=i===j?0:-1});$('prev').disabled=i===0;$('next').disabled=i===17;const weekend=[0,6].includes(new Date(d.date+'T12:00:00+09:00').getUTCDay());let events=[];if(!weekend&&d.date>'2026-10-29')events.push(['10:00～19:00','工作時間','日本時間；住宿為主要辦公基地。']);
 if(d.date==='2026-10-29')events.push(['出發日提醒','工作安排需事先調整','當天有下午航班，原 10:00～19:00 工作安排需另行確認。本日航班以台灣時間標示。']);const pieces=d.body.split(/；/);pieces.forEach(p=>{const m=p.match(/^(\d{2}:\d{2}(?:～\d{2}:\d{2})?)(.*)/);events.push(m?[m[1],m[2].trim(),'']:['時間依原規劃',p,''])});
 let routeKey=d.title.includes('川越')?'川越':d.title.includes('橫濱')?'橫濱':d.date==='2026-11-07'?'淺草酉之市':d.title.includes('鎌倉')?'鎌倉長谷':null;
 const route=routeKey?ROUTES[routeKey]:null;const badge=d.date==='2026-11-07'?'<span class="pill pink">必去 · 固定日期活動</span>':'';
@@ -61,4 +79,64 @@ document.querySelectorAll('details summary').forEach((el,i)=>el.insertAdjacentHT
 
 $('motion').checked=read('anita-tokyo-motion')==='1'||matchMedia('(prefers-reduced-motion: reduce)').matches;function motion(){document.documentElement.classList.toggle('no-motion',$('motion').checked)}motion();$('motion').onchange=()=>{motion();save('anita-tokyo-motion',$('motion').checked?'1':'0')};
 function countdown(){const today=tokyoToday(),n=Math.ceil((new Date('2026-10-29T16:50:00+08:00')-new Date())/86400000);$('countdown').textContent=new Date() < new Date('2026-10-29T16:50:00+08:00')?'距離出發還有 '+n+' 天':today<='2026-11-12'?'慢旅進行中 · 今天也留點空白':'這段慢旅，已成為回憶'}countdown();setInterval(countdown,60000);render(selected,false);if(!storageOK)$('save-note').textContent='此瀏覽器無法儲存紀錄，勾選僅在本次開啟期間有效。';
+// Browser-local trip journal. Nothing is sent to a server.
+const journalState={days:{},db:null,ready:false,queue:Promise.resolve(),volatile:false};
+const journalDates=new Set(DAYS.map(d=>d.date));
+const validPhoto=p=>p&&typeof p.id==='string'&&p.id.length<120&&typeof p.data==='string'&&p.data.length<15000000&&/^data:image\/(jpeg|png|webp|gif);base64,[A-Za-z0-9+/=]+$/.test(p.data)&&typeof p.caption==='string'&&p.caption.length<=2000;
+function journalDay(date){return journalState.days[date]??={date,note:'',photos:[]}}
+function journalMessage(text){$('journal-status').textContent=text}
+function journalSave(date){
+ if(!journalState.db){journalMessage('此瀏覽器無法永久儲存，資料暫留本次頁面。離開前請下載備份。');return Promise.resolve()}
+ journalState.queue=journalState.queue.then(()=>new Promise((resolve,reject)=>{
+ const tx=journalState.db.transaction('days','readwrite');tx.objectStore('days').put(JSON.parse(JSON.stringify(journalDay(date))));tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error);tx.onabort=()=>reject(tx.error||Error('儲存中斷'));
+ })).then(()=>{if(!journalState.volatile)journalMessage('已儲存在這個瀏覽器。請定期下載備份。')}).catch(()=>{journalState.volatile=true;journalMessage('儲存失敗，可能是空間不足。資料暫留本次頁面，請立即下載備份。')});return journalState.queue;
+}
+function renderJournal(date){
+ if(!journalState.ready)return;
+ $('journal-undo').hidden=true;
+ $('journal-date').textContent=date.replaceAll('-','/')+' · 照片與文字';
+ const day=journalDay(date);$('journal-note').value=day.note;$('journal-gallery').replaceChildren();
+ day.photos.forEach(photo=>{const figure=document.createElement('figure');figure.className='photo-card';const img=document.createElement('img');img.src=photo.data;img.alt=photo.caption||'旅途照片';img.loading='lazy';
+ const label=document.createElement('label');label.textContent='照片文字';const caption=document.createElement('textarea');caption.rows=2;caption.maxLength=2000;caption.placeholder='這張照片在哪裡拍的？有什麼想記下來？';caption.value=photo.caption;caption.oninput=()=>{photo.caption=caption.value;img.alt=photo.caption||'旅途照片';journalSave(date)};label.append(caption);
+ const remove=document.createElement('button');remove.type='button';remove.className='action';remove.textContent='移除照片';remove.onclick=()=>{day.photos=day.photos.filter(p=>p.id!==photo.id);journalSave(date);renderJournal(date);$('journal-undo').hidden=false;$('journal-undo').onclick=()=>{day.photos.push(photo);journalSave(date);renderJournal(date);$('journal-undo').hidden=true}};figure.append(img,label,remove);$('journal-gallery').append(figure)});
+ $('journal-empty').hidden=day.photos.length>0;
+}
+async function addJournalFiles(files,date){
+ const day=journalDay(date);let added=0,skipped=0;
+ for(const file of files){
+  if(day.photos.length>=20||file.size>10*1024*1024||!/^image\/(jpeg|png|webp|gif)$/.test(file.type)){skipped++;continue}
+  try{const data=await new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(reader.result);reader.onerror=reject;reader.readAsDataURL(file)});
+   // Decode before storing so damaged image files do not enter the journal.
+   await new Promise((resolve,reject)=>{const image=new Image();image.onload=resolve;image.onerror=reject;image.src=data});
+   day.photos.push({id:Date.now().toString(36)+'-'+Math.random().toString(36).slice(2),data,caption:''});added++;
+  }catch(e){skipped++}
+ }
+ await journalSave(date);if(DAYS[selected].date===date)renderJournal(date);
+ journalMessage('已加入 '+added+' 張照片。'+(skipped?'略過 '+skipped+' 張：限 JPG、PNG、WebP、GIF，每張不超過 10 MB，每日最多 20 張。':'')+(journalState.volatile||!journalState.db?'請下載備份，避免離開後遺失。':'照片只保存在這個瀏覽器。'));
+}
+function downloadJournal(){
+ const blob=new Blob([JSON.stringify({format:'anita-tokyo-journal',version:1,days:journalState.days},null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='東京旅途照片與筆記-'+tokyoToday()+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);journalMessage('已開始下載備份，請確認檔案已儲存。備份包含照片與文字，可在此頁還原。');
+}
+function mergeJournalBackup(data){
+ if(!data||data.format!=='anita-tokyo-journal'||data.version!==1||!data.days||typeof data.days!=='object'||Array.isArray(data.days))throw Error('不是此手帳的備份格式。');
+ const entries=Object.entries(data.days);
+ // Validate everything before applying any changes.
+ for(const [date,day]of entries){if(!journalDates.has(date)||!day||day.date!==date||typeof day.note!=='string'||day.note.length>10000||!Array.isArray(day.photos)||day.photos.length>20||!day.photos.every(validPhoto))throw Error('備份含有不支援的日期、圖片或文字內容。');
+ const local=journalDay(date);if(new Set([...local.photos,...day.photos].map(p=>p.id)).size>20)throw Error('合併後單日超過 20 張照片，請先整理照片。');if(local.note&&day.note&&local.note!==day.note&&local.note.length+day.note.length+20>10000)throw Error('合併後文字超過單日上限。');}
+ for(const [date,imported]of entries){const local=journalDay(date);if(imported.note&&local.note!==imported.note)local.note=local.note?local.note+'\n\n〔匯入筆記〕\n'+imported.note:imported.note;const ids=new Set(local.photos.map(p=>p.id));for(const photo of imported.photos)if(!ids.has(photo.id)){local.photos.push({id:photo.id,data:photo.data,caption:photo.caption});ids.add(photo.id)}journalSave(date)}
+ return entries.length;
+}
+async function initJournal(){
+ try{journalState.db=await new Promise((resolve,reject)=>{if(!globalThis.indexedDB){reject(Error('不支援儲存'));return}const request=indexedDB.open('anita-tokyo-photo-journal',1);request.onupgradeneeded=()=>request.result.createObjectStore('days',{keyPath:'date'});request.onsuccess=()=>resolve(request.result);request.onerror=()=>reject(request.error);request.onblocked=()=>reject(Error('儲存被其他頁面占用'))});
+ const rows=await new Promise((resolve,reject)=>{const tx=journalState.db.transaction('days','readonly'),req=tx.objectStore('days').getAll();req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error)});for(const row of rows)if(journalDates.has(row.date))journalState.days[row.date]=row;
+ journalMessage('照片與文字只儲存在這個瀏覽器，不會同步至 Notion。');
+ }catch(e){journalState.db=null;journalMessage('此瀏覽器無法永久儲存。仍可加入照片與文字，離開前請下載備份。')}
+ journalState.ready=true;window.journalLoaded=true;$('journal-fields').disabled=false;renderJournal(DAYS[selected].date);
+ $('journal-note').oninput=()=>{const date=DAYS[selected].date;journalDay(date).note=$('journal-note').value;journalSave(date)};
+ for(const id of ['journal-camera','journal-upload'])$(id).onchange=async e=>{const files=Array.from(e.target.files||[]),date=DAYS[selected].date;e.target.value='';if(files.length)await addJournalFiles(files,date)};
+ $('journal-export').onclick=downloadJournal;
+ $('journal-import').onchange=async e=>{const file=e.target.files?.[0];e.target.value='';if(!file)return;try{if(file.size>100*1024*1024)throw Error('備份超過 100 MB，無法匯入。');const count=mergeJournalBackup(JSON.parse(await file.text()));await journalState.queue;renderJournal(DAYS[selected].date);journalMessage('已合併 '+count+' 天資料，原有照片保留。'+(!journalState.db||journalState.volatile?'請下載備份以保留本次內容。':''))}catch(err){journalMessage('未匯入：'+err.message)}};
+}
+initJournal();
+
 </script></body></html>
