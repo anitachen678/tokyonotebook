@@ -16,8 +16,11 @@ html{scroll-padding-top:85px}body{padding-bottom:35px}main{max-width:820px;paddi
 
 /* Phrase notebook: search, personal favorites, and explicit copy-and-open flow. */
 .phrase-filters{display:grid;grid-template-columns:1.4fr 1fr;gap:12px}.phrase-filters label{font-size:14px}.phrase-filters input,.phrase-filters select,.ai-translate select,.ai-translate textarea,#phrase-copy-fallback{display:block;width:100%;min-height:48px;border:1px solid #b6a994;border-radius:12px;background:#fffcf6;padding:10px 12px;font:inherit;color:var(--ink);margin:7px 0 12px;max-width:100%;box-sizing:border-box}.phrase-filters input:focus-visible,.phrase-filters select:focus-visible,.ai-translate textarea:focus-visible{outline:3px solid #805128;outline-offset:3px}.phrase-toolbar{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}.phrase-toolbar .action[aria-pressed=true],.favorite-button[aria-pressed=true]{background:#d9e3d2;border-color:#526952;color:#334d33}.phrase-row{display:grid;grid-template-columns:minmax(0,1fr) 70px;gap:8px;align-items:center;border-bottom:1px dashed #c8bba8;padding:8px 0}.phrase-row .phrase{margin:0;border:0;background:#fffcf6;padding:13px 14px;line-height:1.7}.phrase-row .phrase .phrase-label{font-size:11px;color:#78634a;letter-spacing:.04em}.phrase-row .phrase strong{font-size:16px;font-weight:500;display:block}.phrase-row .phrase span[lang=ja]{color:#716a60;font-size:13px}.favorite-button{min-width:68px;padding:8px 5px;min-height:48px;font-size:13px}.ai-translate{border-top:2px dashed #c6b59c;padding-top:25px;margin-top:30px;scroll-margin-top:85px}.ai-translate textarea{resize:vertical;line-height:1.7}.ai-translate label{font-size:14px}.ai-translate #ai-prompt{background:#f7f3e9;font-size:14px}#phrase-count{margin:8px 0}#phrase-more{width:100%;margin-top:15px}#phrase-copy-fallback{font-size:20px;line-height:1.7;resize:vertical}#phrase-dialog .phrase-large{margin:24px 0}#phrase-dialog .phrase-toolbar .action{flex:1}#phrase-dialog #phrase-reading{color:#786b5d}@media(max-width:480px){.phrase-filters{grid-template-columns:1fr;gap:0}#phrases{padding:18px 15px}.phrase-toolbar .action{font-size:13px;padding:8px 10px}.phrase-row .phrase{padding:12px}.phrase-row{grid-template-columns:minmax(0,1fr) 66px}.favorite-button{min-width:64px}.ai-translate .phrase-toolbar .action{width:100%}}
+
+/* Little notebook moments. Motion is optional and never blocks controls. */
+.category-doodle{width:30px;height:30px;flex-shrink:0;vertical-align:middle;margin-right:7px}.phrase-row .phrase .phrase-label{display:flex;align-items:center;margin-bottom:3px}.phrase-row .phrase .phrase-label span{display:inline;font-size:12px}.phrase-dialog-category{display:flex;align-items:center;gap:5px;color:#78634a;font-size:13px}.speech-toolbar{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}.speech-toolbar .action{flex:1;white-space:nowrap;min-width:90px}.speech-toolbar .speak-symbol{font-size:17px}.speech-note{font-size:12px;color:#786b5d}.phrase-row.just-saved .favorite-button{animation:bookmark-pop .4s ease-out}.favorite-button[aria-pressed=true]:before{content:'▰';font-size:10px;margin-right:3px}.stop.done h4:after{content:'完成';display:inline-block;font-size:12px;color:#526952;border:1.5px dashed #71856b;border-radius:5px;padding:0 6px;margin-left:8px;transform:rotate(-8deg);white-space:nowrap}.stop.just-completed h4:after{animation:stamp-land .4s ease-out}.notebook-cat{display:block;width:88px;height:76px;float:right;margin:0 2px 4px 12px;pointer-events:none}.cat-tail{transform-box:fill-box;transform-origin:10% 90%;animation:cat-tail-sway 9s ease-in-out infinite}.cat-eyes{transform-box:fill-box;transform-origin:center;animation:cat-blink 11s infinite}.cat-caption{font-size:9px;fill:#786b5d;stroke:none;letter-spacing:1px}.section-doodle{width:34px;height:34px;vertical-align:middle;margin-right:7px}.wallet-feedback{display:inline-flex;align-items:center;gap:7px}.wallet-feedback svg{animation:bookmark-pop .4s ease-out}#home .notebook-cat{float:none;position:absolute;right:10px;top:12px;width:93px;height:90px}#home .hero-art{top:111px;width:105px;height:120px;opacity:.65}#home .hero>div{padding-right:112px}#home .note{clear:both}#phrase-speech-status{min-height:2em;margin-top:10px}@keyframes bookmark-pop{0%{transform:scale(.9) rotate(-4deg)}60%{transform:scale(1.06) rotate(2deg)}100%{transform:scale(1) rotate(0)}}@keyframes stamp-land{0%{opacity:0;transform:scale(1.5) rotate(-16deg)}70%{opacity:1;transform:scale(.94) rotate(-7deg)}100%{transform:scale(1) rotate(-8deg)}}@keyframes cat-tail-sway{0%,78%,100%{transform:rotate(0)}82%{transform:rotate(-7deg)}88%{transform:rotate(6deg)}94%{transform:rotate(-3deg)}}@keyframes cat-blink{0%,44%,48%,100%{transform:scaleY(1)}46%{transform:scaleY(.12)}}.no-motion *,.no-motion *::before,.no-motion *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}@media(max-width:480px){.speech-toolbar{gap:7px}.speech-toolbar .action{min-width:78px;padding:8px;font-size:13px}.phrase-large{font-size:28px}#home .hero-art{width:90px;height:100px}#home .hero>div{padding-right:102px}}
 </style></head><body><nav aria-label="主要選單"><a href="#days">今日行程</a><a href="#photos">照片日記</a><a href="#expenses">日圓記帳</a><button class="action" id="open-tools" type="button">更多</button></nav><main>
-<section id="home"><span class="eyebrow">ANITA’S TOKYO NOTEBOOK · V2</span><div class="hero"><div><div class="eyebrow">ANITA’S TOKYO NOTEBOOK · 2026</div><h1>東京生活日記<br>秋日慢旅手帳</h1><p>在東京好好工作，也好好生活。<br>一頓晚餐、一條小巷、一杯不趕時間的咖啡。</p><p class="pill">2026/10/26 — 11/14 · 20 天</p><p><span id="countdown" class="pill green" role="status"></span></p><div class="journal-actions"><a class="action" href="#photos">拍照／匯入照片</a><a class="action" href="#cat-care">家人貓咪照顧日記</a><a class="action" href="#days">查看每日行程</a></div></div>
+<section id="home"><svg class="notebook-cat" viewBox="0 0 110 100" role="img" aria-label="坐在旅行箱旁、偶爾眨眼的小貓"><g stroke="#57534e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"><rect x="12" y="48" width="46" height="37" rx="7" fill="#adc3cb"/><path d="M27 48v-8h16v8M21 57v18m28-18v18m-29 10v4m29-4v4"/><path class="cat-tail" d="M83 81q25-1 19-22q-2-7-6-4q-4 4 0 9q4 12-13 9" fill="#ddcda8"/><path d="M56 46 55 22l14 9q9-4 16 0l13-9-2 26q9 18-5 24l-1 13H63l-2-14q-17-7-5-25Z" fill="#ddcda8"/><g class="cat-eyes"><path d="M65 46h1m19 0h1" stroke-width="3"/></g><path d="m73 53 3 2 3-2m-3 2v4m-4 1 4-1 4 1M58 53l-7-2m7 8-7 2m42-8 7-2m-7 8 7 2M70 73v11m12-11v11"/></g><text x="55" y="98" text-anchor="middle" class="cat-caption">LET’S GO SLOWLY</text></svg><span class="eyebrow">ANITA’S TOKYO NOTEBOOK · V2</span><div class="hero"><div><div class="eyebrow">ANITA’S TOKYO NOTEBOOK · 2026</div><h1>東京生活日記<br>秋日慢旅手帳</h1><p>在東京好好工作，也好好生活。<br>一頓晚餐、一條小巷、一杯不趕時間的咖啡。</p><p class="pill">2026/10/26 — 11/14 · 20 天</p><p><span id="countdown" class="pill green" role="status"></span></p><div class="journal-actions"><a class="action" href="#photos">拍照／匯入照片</a><a class="action" href="#cat-care">家人貓咪照顧日記</a><a class="action" href="#days">查看每日行程</a></div></div>
 <svg class="hero-art" viewBox="0 0 520 570" role="img" aria-labelledby="art-title"><title id="art-title">莫蘭迪色手繪東京小圖鑑：東京鐵塔、雷門、咖啡、貓、電車、飯糰與海港。圖案為旅程意象，非新增行程。</title>
 <style>.doodle{fill:none;stroke:#57534e;stroke-width:2.7;stroke-linecap:round;stroke-linejoin:round}.caption{font-family:Huninn,sans-serif;font-size:13px;letter-spacing:1.5px;fill:#57534e;stroke:none}.tiny{font-size:10px;letter-spacing:1px}</style>
 <g class="doodle"><path d="M35 42q17-10 36-3m381 8 28-9m-19 18 22 1"/><text x="260" y="50" text-anchor="middle" style="font-family:Huninn,sans-serif;font-size:33px;letter-spacing:5px;fill:#57534e;stroke:none">TOKYO NOTES</text><text class="caption tiny" x="260" y="73" text-anchor="middle">散步・咖啡・秋日生活</text>
@@ -63,7 +66,7 @@ html{scroll-padding-top:85px}body{padding-bottom:35px}main{max-width:820px;paddi
 <section id="phrases"><div class="eyebrow">WORDS FOR SLOW DAYS</div><h2>日語快捷卡</h2><p class="compact-intro">80 句旅行常用語。點開放大給對方看，把常用句收藏起來。</p><div class="phrase-filters"><label for="phrase-search">搜尋中文或日文<input id="phrase-search" type="search" placeholder="例如：咖啡、免稅、電梯" autocomplete="off" maxlength="100"></label><label for="phrase-category">使用情境<select id="phrase-category"><option>全部</option><option>點餐與咖啡</option><option>結帳</option><option>購物與美妝</option><option>交通</option><option>住宿</option><option>工作與網路</option><option>詢問與求助</option></select></label></div><div class="phrase-toolbar"><button class="action" id="phrase-favorites" type="button" aria-pressed="false">只看收藏（0）</button><button class="action" id="phrase-clear" type="button">清除篩選</button><a class="action" href="#ai-translate">臨時翻譯</a></div><p id="phrase-count" class="muted" role="status" aria-live="polite"></p><div id="phrase-list"></div><button class="action" id="phrase-more" type="button">顯示更多句子</button><p id="phrase-status" class="status" role="status"></p>
 <div id="ai-translate" class="ai-translate"><div class="eyebrow">SOMETHING ELSE TO SAY?</div><h3>臨時想說的話，交給 AI</h3><p class="muted">先複製翻譯需求，再開啟 ChatGPT 貼上送出。需要網路；這裡不會自動產生翻譯。</p><label for="ai-context">使用情境</label><select id="ai-context"><option>點餐與咖啡</option><option>結帳</option><option>購物與美妝</option><option>交通</option><option>住宿</option><option>工作與網路</option><option>詢問與求助</option></select><label for="ai-request">你想表達什麼？</label><textarea id="ai-request" rows="3" maxlength="1000" placeholder="例如：我想找適合送給媽媽、香味不要太濃的護手霜。"></textarea><label for="ai-prompt">整理好的翻譯需求</label><textarea id="ai-prompt" rows="6" readonly placeholder="輸入上方內容後，這裡會整理成可複製的需求。"></textarea><div class="phrase-toolbar"><button class="action primary" id="ai-copy" type="button" disabled>1．複製翻譯需求</button><a class="action" id="ai-open" href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">2．開啟 ChatGPT ↗</a></div><p id="ai-status" class="status" role="status" aria-live="polite"></p><p class="muted">開啟對話後，仍需要貼上並送出。你在這裡輸入的內容不會自動傳送。</p></div></section>
 <dialog id="tools-dialog" aria-labelledby="tools-title"><div class="dialog-head"><h2 id="tools-title">手帳工具</h2><button class="action" data-close="tools-dialog" type="button">關閉</button></div><div class="tools-grid"><a class="action" href="#phrases">日語快捷卡</a><a class="action" href="#ai-translate">AI 翻譯入口</a><a class="action" href="#pockets">咖啡與小店</a><a class="action" href="#flights">航班與回程</a><a class="action" href="#stay">住宿與辦公</a><a class="action" href="#todo">行前待辦</a><a class="action" href="#cat-care">貓咪照顧日記</a><a class="action" href="#sources">Notion 原始子頁</a><a class="action" href="#home">手帳扉頁</a></div><h3>保存這趟旅行</h3><p class="muted">記帳、行程調整與日語收藏保存在目前瀏覽器。照片與文字使用原本的獨立備份。</p><div class="backup-actions"><button id="v2-export" class="action" type="button">備份記帳、行程與收藏</button><label class="action upload-label">還原記帳、行程與收藏<input id="v2-import" type="file" accept="application/json,.json"></label><button class="action" id="photo-backup-shortcut" type="button">前往照片備份</button></div><p id="backup-status" class="status" role="status"></p><label class="checks"><input type="checkbox" id="v2-motion"> 減少動態效果</label></dialog>
-<dialog id="phrase-dialog" aria-labelledby="phrase-title"><div class="dialog-head"><h2 id="phrase-title">日語卡</h2><button class="action" data-close="phrase-dialog" type="button">關閉</button></div><p id="phrase-japanese" class="phrase-large" lang="ja"></p><p id="phrase-reading" lang="ja"></p><p id="phrase-chinese"></p><div class="phrase-toolbar"><button class="action primary" id="phrase-copy" type="button">複製日文</button><button class="action" id="phrase-dialog-favorite" type="button" aria-pressed="false">加入收藏</button></div><textarea id="phrase-copy-fallback" aria-label="可選取複製的日文" rows="2" readonly hidden lang="ja"></textarea><p id="phrase-copy-status" class="status" role="status"></p></dialog>
+<dialog id="phrase-dialog" aria-labelledby="phrase-title"><div class="dialog-head"><h2 id="phrase-title">日語卡</h2><button class="action" data-close="phrase-dialog" type="button">關閉</button></div><div id="phrase-dialog-category" class="phrase-dialog-category"></div><p id="phrase-japanese" class="phrase-large" lang="ja"></p><p id="phrase-reading" lang="ja"></p><p id="phrase-chinese"></p><div class="speech-toolbar" role="group" aria-label="日文朗讀"><button class="action primary" id="phrase-speak" type="button"><span class="speak-symbol" aria-hidden="true">♪</span> 聽發音</button><button class="action" id="phrase-slow" type="button">慢速朗讀</button><button class="action" id="phrase-stop" type="button" disabled>停止</button></div><p id="phrase-speech-status" class="status" role="status" aria-live="polite"></p><p class="speech-note">使用裝置的日文語音，聲音依手機而異。播放時請確認音量；部分語音需要網路。</p><div class="phrase-toolbar"><button class="action primary" id="phrase-copy" type="button">複製日文</button><button class="action" id="phrase-dialog-favorite" type="button" aria-pressed="false">加入收藏</button></div><textarea id="phrase-copy-fallback" aria-label="可選取複製的日文" rows="2" readonly hidden lang="ja"></textarea><p id="phrase-copy-status" class="status" role="status"></p></dialog>
 <dialog id="move-dialog" aria-labelledby="move-title"><div class="dialog-head"><h2 id="move-title">移到其他日期</h2><button class="action" data-close="move-dialog" type="button">取消</button></div><p id="move-description"></p><form id="move-form"><label>選擇日期<select class="action" id="move-date"></select></label><p class="muted">移動後保留原建議時間；交通、店家營業與時間順序請再確認。</p><button class="action primary" type="submit">移到這一天</button></form></dialog>
 <dialog id="restore-dialog" aria-labelledby="restore-title"><div class="dialog-head"><h2 id="restore-title">還原備份</h2><button class="action" data-close="restore-dialog" type="button">取消</button></div><p id="restore-description"></p><p class="muted">會取代目前的記帳、行程調整與日語收藏。照片、文字日記及原始行程不受影響。還原前會先下載目前資料的備份。</p><button class="action primary" id="restore-apply" type="button">先備份，再還原</button></dialog>
 <div id="global-status" role="status" aria-live="polite"></div>
@@ -146,7 +149,7 @@ function renderV2(i,scroll=true){
  }).join('')+'</ol>'+(personal.orders[d.date]||BASE_EVENTS.some(e=>(e.origin===d.date||changeFor(e).date===d.date)&&changeFor(e).date!==e.origin)?'<p class="muted">已調整順序／日期。顯示原建議時間，交通預算不會自動重算。</p>':'')+(route?'<details><summary>交通小抄・路線與車資</summary><div class="route"><p>'+escapeHTML(route[0])+'</p><p>單程：'+escapeHTML(route[1])+'</p><p>概估車資：'+escapeHTML(route[2])+' 日圓。'+escapeHTML(route[3])+'</p><p class="muted">原規劃估算，當日車次與票價另查。</p></div></details>':'')+'<details><summary>完整原安排與 Notion</summary><p class="original-copy">'+escapeHTML(d.body)+'</p><p class="muted">此處保留原文，包含原時間與提醒，不受上方調整影響。</p><a href="https://app.notion.com/p/40134cf06e8a818d904ef3956eeb3199" target="_blank" rel="noopener noreferrer">原始散步日曆 ↗</a> · <a href="https://app.notion.com/p/40434cf06e8a81128127d105863ed4c3" target="_blank" rel="noopener noreferrer">交通錢包 ↗</a></details><button class="action" id="reset-day" type="button">恢復這天原安排</button>';
  const panel=$('day-panel');
  const routeDetails=panel.querySelector('.route')?.closest('details');if(routeDetails)panel.insertBefore(routeDetails,panel.querySelector('.timeline'));
- for(const [attribute,status]of [['state','done'],['skip','skip']])panel.querySelectorAll('[data-'+attribute+']').forEach(b=>b.onclick=()=>{const e=EVENT_MAP.get(b.dataset[attribute]),c=changeFor(e);personal.changes[e.id]={...c,status:c.status===status?'todo':status};persistV2();render(selected,false)});
+ for(const [attribute,status]of [['state','done'],['skip','skip']])panel.querySelectorAll('[data-'+attribute+']').forEach(b=>b.onclick=()=>{const e=EVENT_MAP.get(b.dataset[attribute]),c=changeFor(e);personal.changes[e.id]={...c,status:c.status===status?'todo':status};persistV2();render(selected,false);if(status==='done'&&personal.changes[e.id].status==='done')$('day-panel').querySelector('[data-state="'+e.id+'"]')?.closest('.stop').classList.add('just-completed')});
  for(const [attr,delta]of [['up',-1],['down',1]])panel.querySelectorAll('[data-'+attr+']').forEach(b=>b.onclick=()=>{const current=eventsFor(d.date),index=current.findIndex(e=>e.id===b.dataset[attr]),other=index+delta;if(other<0||other>=current.length||current[index].locked||current[other].locked)return;[current[index],current[other]]=[current[other],current[index]];personal.orders[d.date]=current.map(e=>e.id);persistV2();render(selected,false);notice('順序已調整，時間與交通請再確認。')});
  panel.querySelectorAll('[data-move]').forEach(b=>b.onclick=()=>{pendingMove=b.dataset.move;$('move-description').textContent=EVENT_MAP.get(pendingMove).title;$('move-date').value=d.date;$('move-dialog').showModal()});
  panel.querySelectorAll('[data-expense]').forEach(b=>b.onclick=()=>{expenseEditing=null;$('expense-submit').textContent='記下這筆';$('expense-cancel').hidden=true;$('expense-date').value=d.date;$('expense-note').value=EVENT_MAP.get(b.dataset.expense).title.slice(0,200);renderExpenses();location.hash='expenses';$('expense-amount').focus()});
@@ -178,7 +181,7 @@ function togglePhraseFavorite(p){
  const id=phraseKey(p),favorites=new Set(favoriteIds());
  if(favorites.has(id))favorites.delete(id);else favorites.add(id);
  personal.favorites=[...favorites];const saved=persistV2();
- renderPhraseCards();if(currentPhrase)renderPhraseDialog();
+ renderPhraseCards();const savedRow=$('phrase-list').querySelector('[data-phrase-id="'+id+'"]');if(savedRow&&favorites.has(id))savedRow.classList.add('just-saved');if(currentPhrase)renderPhraseDialog();
  $('phrase-status').textContent=saved?'收藏已儲存在目前瀏覽器，也會包含在手帳備份中。':'收藏暫留本次頁面，請先下載手帳備份。';
 }
 function renderPhraseCards(){
@@ -189,18 +192,18 @@ function renderPhraseCards(){
  $('phrase-more').hidden=rows.length<=phraseVisible;
  if(!rows.length){const empty=document.createElement('p');empty.className='empty';empty.textContent=phraseOnlyFavorites?'還沒有符合的收藏。可以先關閉收藏篩選，按「收藏」保存常用句。':'換個關鍵字試試，或使用下方的 AI 翻譯入口。';list.append(empty);return}
  rows.slice(0,phraseVisible).forEach(p=>{
- const article=document.createElement('article');article.className='phrase-row';
+ const article=document.createElement('article');article.className='phrase-row';article.dataset.phraseId=phraseKey(p);
  const button=document.createElement('button');button.type='button';button.className='phrase';
- const category=document.createElement('span');category.className='phrase-label';category.textContent=p[0];
+ const category=document.createElement('span');category.className='phrase-label';category.innerHTML=categoryDoodle(p[0]);const categoryName=document.createElement('span');categoryName.textContent=p[0];category.append(categoryName);
  const chinese=document.createElement('strong');chinese.textContent=p[1];
  const japanese=document.createElement('span');japanese.lang='ja';japanese.textContent=p[2];
- button.append(category,chinese,japanese);button.onclick=()=>{currentPhrase=p;renderPhraseDialog();$('phrase-dialog').showModal()};
+ button.append(category,chinese,japanese);button.onclick=()=>{stopPhraseSpeech('');currentPhrase=p;renderPhraseDialog();speechControls();$('phrase-dialog').showModal()};
  const favorite=document.createElement('button');favorite.type='button';favorite.className='action favorite-button';favorite.textContent=phraseFavorite(p)?'已收藏':'收藏';favorite.setAttribute('aria-label',(phraseFavorite(p)?'取消收藏：':'收藏：')+p[1]);favorite.setAttribute('aria-pressed',String(phraseFavorite(p)));favorite.onclick=()=>togglePhraseFavorite(p);
  article.append(button,favorite);list.append(article);
  });
 }
 function renderPhraseDialog(){
- const p=currentPhrase;if(!p)return;
+ const p=currentPhrase;if(!p)return;$('phrase-dialog-category').innerHTML=categoryDoodle(p[0]);const categoryText=document.createElement('span');categoryText.textContent=p[0];$('phrase-dialog-category').append(categoryText);
  $('phrase-copy-fallback').hidden=true;$('phrase-title').textContent=p[1];$('phrase-japanese').textContent=p[2];$('phrase-reading').textContent=p[3];$('phrase-chinese').textContent=p[1];
  $('phrase-dialog-favorite').textContent=phraseFavorite(p)?'取消收藏':'加入收藏';$('phrase-dialog-favorite').setAttribute('aria-pressed',String(phraseFavorite(p)));$('phrase-copy-status').textContent='';
 }
@@ -212,6 +215,59 @@ function buildTranslationPrompt(){
  const request=$('ai-request').value.trim(),context=$('ai-context').value;
  return request?'請協助我在日本旅行時溝通。\n情境：'+context+'。\n我想表達：'+request+'\n\n請提供自然、禮貌、適合當面給對方看的日文，並依序附上：\n1. 日文句子。\n2. 假名讀音。\n3. 繁體中文意思。\n若資訊不足，請先詢問我，不要自行補上日期、金額、地址或產品成分。':'';
 }
+// Device speech only; no automatic playback and no microphone permission.
+let phraseUtterance=null,speechSequence=0,speechStartTimer=null;
+function japaneseVoice(){
+ if(!('speechSynthesis' in window))return null;
+ const voices=window.speechSynthesis.getVoices().filter(v=>/^ja(?:[-_]|$)/i.test(v.lang));
+ return voices.find(v=>v.localService&&/^ja[-_]JP$/i.test(v.lang))||voices.find(v=>v.localService)||voices[0]||null;
+}
+function speechSupported(){return 'speechSynthesis' in window&&'SpeechSynthesisUtterance' in window}
+function speechControls(){
+ const available=speechSupported()&&!!japaneseVoice();
+ $('phrase-speak').disabled=!available;$('phrase-slow').disabled=!available;
+ $('phrase-stop').disabled=!phraseUtterance;
+ if(!phraseUtterance)$('phrase-speech-status').textContent=available?'按一下聽日文，慢速適合跟著練習。':speechSupported()?'尚未找到日文語音。可先使用讀音文字，或在裝置安裝日文語音後重新開啟。':'此瀏覽器不支援朗讀，可先使用日文大字與讀音文字。';
+}
+function stopPhraseSpeech(message='已停止朗讀。'){
+ speechSequence++;clearTimeout(speechStartTimer);
+ if(speechSupported())window.speechSynthesis.cancel();
+ phraseUtterance=null;
+ $('phrase-stop').disabled=true;
+ if(message)$('phrase-speech-status').textContent=message;
+}
+function speakPhrase(slow=false){
+ if(!currentPhrase)return;
+ stopPhraseSpeech('');const voice=japaneseVoice();
+ if(!speechSupported()||!voice){speechControls();return}
+ const sequence=++speechSequence,utterance=new SpeechSynthesisUtterance(currentPhrase[2]);
+ phraseUtterance=utterance;utterance.lang='ja-JP';utterance.voice=voice;utterance.rate=slow?0.7:1;utterance.pitch=1;utterance.volume=1;
+ $('phrase-stop').disabled=false;$('phrase-speech-status').textContent='準備朗讀…';
+ utterance.onstart=()=>{if(sequence!==speechSequence)return;clearTimeout(speechStartTimer);$('phrase-speech-status').textContent=slow?'慢速朗讀中…':'朗讀中…'};
+ utterance.onend=()=>{if(sequence!==speechSequence)return;clearTimeout(speechStartTimer);phraseUtterance=null;$('phrase-stop').disabled=true;$('phrase-speech-status').textContent='朗讀完成，可以再聽一次。'};
+ utterance.onerror=()=>{if(sequence!==speechSequence)return;clearTimeout(speechStartTimer);phraseUtterance=null;$('phrase-stop').disabled=true;$('phrase-speech-status').textContent='朗讀暫時無法播放，請確認裝置音量、日文語音與網路後再試。'};
+ speechStartTimer=setTimeout(()=>{if(sequence!==speechSequence)return;stopPhraseSpeech('語音沒有啟動，請再按一次；若仍無聲音，可先使用讀音文字。')},12000);
+ window.speechSynthesis.speak(utterance);
+}
+function initPhraseSpeech(){
+ $('phrase-speak').onclick=()=>speakPhrase(false);$('phrase-slow').onclick=()=>speakPhrase(true);$('phrase-stop').onclick=()=>stopPhraseSpeech();
+ $('phrase-dialog').addEventListener('close',()=>stopPhraseSpeech(''));
+ document.addEventListener('visibilitychange',()=>{if(document.hidden)stopPhraseSpeech('')});
+ window.addEventListener('pagehide',()=>stopPhraseSpeech(''));
+ if(speechSupported())window.speechSynthesis.addEventListener('voiceschanged',speechControls);
+ speechControls();
+}
+const categoryDrawings={
+ '點餐與咖啡':'<path d="M7 12h19l-2 13q-8 7-15 0Z" fill="#adc3cb"/><path d="M26 14q10-1 6 7l-7 2M5 31h24M12 7q-3-3 0-6m8 6q-3-3 0-6"/>',
+ '結帳':'<rect x="5" y="9" width="27" height="22" rx="5" fill="#ddcda8"/><path d="M8 9V6h20v3M22 18h11v8H22Z"/><circle cx="26" cy="22" r="1"/>',
+ '購物與美妝':'<path d="M7 13h24l-2 21H9Z" fill="#cdaea9"/><path d="M13 14V8q5-9 11 0v6M14 22h10"/>',
+ '交通':'<rect x="7" y="4" width="24" height="28" rx="6" fill="#b5c5b0"/><path d="M11 11h16v10H11Zm3 21-4 5m14-5 4 5M15 7h8"/><circle cx="13" cy="26" r="1.5"/><circle cx="25" cy="26" r="1.5"/>',
+ '住宿':'<path d="M3 18 19 4l16 14M7 16v18h24V16" fill="#ddcda8"/><path d="M15 34V23h8v11M12 16h5"/>',
+ '工作與網路':'<rect x="7" y="5" width="25" height="22" rx="3" fill="#adc3cb"/><path d="m7 27-4 7h33l-4-7M14 12q5-5 11 0m-8 4q2-2 5 0m-2 4h.1"/>',
+ '詢問與求助':'<path d="M5 6h29v22H18l-9 7v-7H5Z" fill="#c9bdd2"/><path d="M15 13q0-6 6-4q7 3 0 8l-1 3m0 4h.1"/>'
+};
+function categoryDoodle(category){return '<svg class="category-doodle" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><g fill="none" stroke="#57534e" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">'+(categoryDrawings[category]||categoryDrawings['詢問與求助'])+'</g></svg>'}
+
 function initPhraseTools(){
  const reset=()=>{phraseVisible=12;renderPhraseCards()};
  $('phrase-search').oninput=reset;$('phrase-category').onchange=reset;
@@ -223,13 +279,13 @@ function initPhraseTools(){
  const updatePrompt=()=>{$('ai-prompt').value=buildTranslationPrompt();$('ai-copy').disabled=!$('ai-prompt').value;$('ai-status').textContent=''};
  $('ai-request').oninput=updatePrompt;$('ai-context').onchange=updatePrompt;
  $('ai-copy').onclick=()=>copyPhraseText($('ai-prompt').value,$('ai-prompt'),$('ai-status'));
- renderPhraseCards();updatePrompt();
+ renderPhraseCards();updatePrompt();initPhraseSpeech();
 }
 
 function initV2(){
  $('expense-date').value=DAYS[selected].date;
  $('expense-date').onchange=()=>{clearExpense();renderExpenses()};
- $('expense-form').onsubmit=e=>{e.preventDefault();const amount=Number($('expense-amount').value),date=$('expense-date').value;if(!Number.isSafeInteger(amount)||amount<1||amount>99999999||!allDates.has(date)){notice('請填入旅程日期與正整數日圓金額。');return}const row={id:expenseEditing||crypto.randomUUID(),date,amount,category:$('expense-category').value,payment:$('expense-payment').value,note:$('expense-note').value.trim()};const index=personal.expenses.findIndex(e=>e.id===row.id);if(index<0)personal.expenses.push(row);else personal.expenses[index]=row;const saved=persistV2();clearExpense();renderExpenses();$('expense-status').textContent=saved?'已記下，保存在目前瀏覽器。':'尚未永久儲存，請立即備份。'};
+ $('expense-form').onsubmit=e=>{e.preventDefault();const amount=Number($('expense-amount').value),date=$('expense-date').value;if(!Number.isSafeInteger(amount)||amount<1||amount>99999999||!allDates.has(date)){notice('請填入旅程日期與正整數日圓金額。');return}const row={id:expenseEditing||crypto.randomUUID(),date,amount,category:$('expense-category').value,payment:$('expense-payment').value,note:$('expense-note').value.trim()};const index=personal.expenses.findIndex(e=>e.id===row.id);if(index<0)personal.expenses.push(row);else personal.expenses[index]=row;const saved=persistV2();clearExpense();renderExpenses();$('expense-status').replaceChildren();if(saved){const feedback=document.createElement('span');feedback.className='wallet-feedback';feedback.innerHTML=categoryDoodle('結帳');feedback.append(document.createTextNode('記下了，已保存在目前瀏覽器。'));$('expense-status').append(feedback)}else $('expense-status').textContent='尚未永久儲存，請立即備份。'};
  $('expense-cancel').onclick=()=>{clearExpense();renderExpenses()};
  $('expense-undo').onclick=()=>{if(!removedExpense)return;personal.expenses.splice(removedExpense.index,0,removedExpense.entry);removedExpense=null;persistV2();renderExpenses();$('expense-undo').hidden=true};
  $('open-tools').onclick=()=>$('tools-dialog').showModal();document.querySelectorAll('[data-close]').forEach(b=>b.onclick=()=>$(b.dataset.close).close());$('tools-dialog').querySelectorAll('a').forEach(a=>a.onclick=()=>$('tools-dialog').close());
